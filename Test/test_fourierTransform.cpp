@@ -5,6 +5,7 @@
 
 using namespace ASTex;
 
+//Wrong (?)
 void computePSD (const ImageSpectrald modulus, const ImageSpectrald phase, ImageSpectrald& psd) {
     for (int x = 0; x < modulus.width(); x++) {
         for (int y = 0; y < modulus.width(); y++) {

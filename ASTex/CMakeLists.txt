@@ -2,12 +2,15 @@ cmake_minimum_required(VERSION 3.0)
 
 project(ASTex LANGUAGES CXX)
 
+set(OpenGL_GL_PREFERENCE LEGACY)
+
 find_package(OpenEXR REQUIRED)
 find_package(PNG REQUIRED)
 find_package(ITK CONFIG  REQUIRED)
 include(${ITK_USE_FILE})
 find_package(OpenMP QUIET)
 find_package(Eigen3 REQUIRED)
+find_package(GLEW REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
@@ -113,7 +116,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${ITK_INCLUDE_DIRS} ${PNG_INCL
 target_include_directories(${PROJECT_NAME} PUBLIC $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ASTEX_SOURCE_DIR}>)
 
 
-set ( ASTEX_LIBRARIES ${ITK_LIBRARIES} ${FFTW_LIBRARIES} ${PNG_LIBRARIES} ${OPENEXR_LIBRARIES} Eigen3::Eigen OpenGL::GL GLUT::GLUT)
+set ( ASTEX_LIBRARIES ${ITK_LIBRARIES} ${FFTW_LIBRARIES} ${PNG_LIBRARIES} ${OPENEXR_LIBRARIES} Eigen3::Eigen OpenGL::GL GLUT::GLUT GLEW::GLEW )
 if (NOT(MSVC OR APPLE))
 	set ( ASTEX_LIBRARIES ${ASTEX_LIBRARIES} -pthread )
 endif()

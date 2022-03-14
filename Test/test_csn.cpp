@@ -67,6 +67,7 @@ CycleMapType loadCycles(std::string filename)
 typedef struct
 {
 	bool useCycles;
+	unsigned mipLvl;
 	double gamma;
 	unsigned outputWidth, outputHeight;
 	unsigned proceduralBlendingMode;
@@ -118,6 +119,7 @@ ArgumentsType loadArguments(std::string filename)
 	unsigned uValue;
 	ifs >> uValue;
 	arguments.useCycles = uValue;
+	ifs >> arguments.mipLvl;
 	ifs >> arguments.gamma;
 	ifs >> arguments.outputWidth >> arguments.outputHeight;
 	ifs >> arguments.proceduralBlendingMode;
@@ -333,7 +335,7 @@ int main(int argc, char **argv)
 	std::cout << "Proposed cycle y: " << std::endl << cyclePair.vectors[1] << std::endl;
 	std::cout << "Estimated cycle x: " << std::endl << csn.cycleX() << std::endl;
 	std::cout << "Estimated cycle y: " << std::endl << csn.cycleY() << std::endl;
-	ImageType output = csn.synthesize(arguments.outputWidth, arguments.outputHeight);
+	ImageType output = csn.synthesize(arguments.outputWidth, arguments.outputHeight, arguments.mipLvl);
 	output.for_all_pixels([&] (ImageType::PixelType &pix)
 	{
 		for(int i=0; i<3; ++i)

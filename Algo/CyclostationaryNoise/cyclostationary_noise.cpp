@@ -378,7 +378,7 @@ int main(int argc, char **argv)
 	std::cout << "Proposed cycle y: " << std::endl << cyclePair.vectors[1] << std::endl;
 	std::cout << "Estimated cycle x: " << std::endl << csn.cycleX() << std::endl;
 	std::cout << "Estimated cycle y: " << std::endl << csn.cycleY() << std::endl;
-	ImageType output = csn.synthesize(arguments.outputWidth, arguments.outputHeight);
+	ImageType output = csn.synthesize(arguments.outputWidth, arguments.outputHeight, 0);
 	output.for_all_pixels([&] (ImageType::PixelType &pix)
 	{
 		for(int i=0; i<3; ++i)

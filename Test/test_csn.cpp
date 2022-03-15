@@ -85,6 +85,7 @@ typedef struct
  * Format of the file (don't copy the = symbols):
  * =======
  * <use cycles?>
+ * <MIP-level>
  * <gamma>							//weight's exponant (for HPN)
  * <output width> <output height>
  * <procedural blending mode>		//determines the blending mode (0: HPN, 1: spot noise)
@@ -99,6 +100,7 @@ typedef struct
  * Example:
  * =======
  * 1
+ * 4
  * 2.0
  * 4096 4096
  * 0

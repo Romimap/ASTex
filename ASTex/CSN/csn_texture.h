@@ -1371,9 +1371,64 @@ typename CSN_Texture<I>::PcaPixelType CSN_Texture<I>::proceduralTilingAndBlendin
 		pos[1] = v[1]*(image.height());
 		return pos;
 	};
-	PcaPixelType I1 = image.pixelAbsolute(lmbd_Vector2PixelPos(uv1));
-	PcaPixelType I2 = image.pixelAbsolute(lmbd_Vector2PixelPos(uv2));
-	PcaPixelType I3 = image.pixelAbsolute(lmbd_Vector2PixelPos(uv3));
+
+
+	//NOTE: might be half a texel off
+	auto lmbd_LinearBlend = [](const PcaImageType &image, itkeigen::Vector2d &uv) -> PcaPixelType
+	{
+		float uvx = uv[0]*(image.width()) ;
+		float uvy = uv[1]*(image.height());
+		int x0 = uvx;
+		int y0 = uvy;
+		int x1 = (x0 + 1) % image.width();
+		int y1 = (y0 + 1) % image.height();
+
+		float tx = 1.0f - (uvx - x0);
+		float ty = 1.0f - (uvy - y0);
+
+		tx = std::max(0.0f, std::min(1.0f, tx));
+		ty = std::max(0.0f, std::min(1.0f, ty));
+
+		//printf("%f, %f\n", tx, ty);
+
+		PixelPosType posa;
+		posa[0] = x0;
+		posa[1] = y0;
+		PixelPosType posb;
+		posb[0] = x1;
+		posb[1] = y0;
+		PixelPosType posc;
+		posc[0] = x0;
+		posc[1] = y1;
+		PixelPosType posd;
+		posd[0] = x1;
+		posd[1] = y1;
+
+		PcaPixelType a = image.pixelAbsolute(posa);
+		PcaPixelType b = image.pixelAbsolute(posb);
+		PcaPixelType c = image.pixelAbsolute(posc);
+		PcaPixelType d = image.pixelAbsolute(posd);
+		
+		PcaPixelType ans;
+		//ans[0] = -1;
+		//ans[1] = -1;
+		//ans[2] = -1;
+		ans[0] = (a[0] * tx + b[0] * (1.0f - tx)) * ty + (c[0] * tx + d[0] * (1.0f - tx)) * (1.0f - ty);
+		ans[1] = (a[1] * tx + b[1] * (1.0f - tx)) * ty + (c[1] * tx + d[1] * (1.0f - tx)) * (1.0f - ty);
+		ans[2] = (a[2] * tx + b[2] * (1.0f - tx)) * ty + (c[2] * tx + d[2] * (1.0f - tx)) * (1.0f - ty);
+
+
+		//if (ty < 0 || ty > 1) printf("%f\n", ty);
+		//ans[0] = (a[0] * ty + c[0] * (1.0f - ty));
+		//ans[1] = (a[1] * ty + c[1] * (1.0f - ty));
+		//ans[2] = (a[2] * ty + c[2] * (1.0f - ty));
+
+		return ans;
+
+	};
+	PcaPixelType I1 = lmbd_LinearBlend(image, uv1);//image.pixelAbsolute(lmbd_Vector2PixelPos(uv1));
+	PcaPixelType I2 = lmbd_LinearBlend(image, uv2);//image.pixelAbsolute(lmbd_Vector2PixelPos(uv2));
+	PcaPixelType I3 = lmbd_LinearBlend(image, uv3);//image.pixelAbsolute(lmbd_Vector2PixelPos(uv3));
 	// Linear blending
 	PcaPixelType color = I1 * w1 + I2 * w2 + I3 * w3;
 	for(unsigned i=0; i<3; ++i)

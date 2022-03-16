@@ -27,6 +27,8 @@ namespace ASTex
 namespace CSN
 {
 
+enum EstimationType { MEAN, LEAN_MEAN, LEAN_VARIANCE };
+
 template<typename I>
 class CSN_Texture
 {
@@ -57,6 +59,7 @@ public:
 	void setUseCyclicTransfer(bool b);
 	void setUVScale(double uvScale);
 	void setCyclicTransferPolicy(unsigned radius=0, unsigned samples=1);
+	void setEstimationType(EstimationType estimationType);
 
 	ImageRGBd debug_cycleEvaluationMap(int width, int height, Eigen::Vector2d center, double radius) const;
 	void estimateCycles(const Eigen::Vector2d &guidX, const Eigen::Vector2d &guidY, double searchRadius, bool periodicity, unsigned stochasticGradientSearchEnergy=16);
@@ -82,6 +85,8 @@ private:
 	void estimateCycles_periodic(const Eigen::Vector2d &guidX, const Eigen::Vector2d &guidY, int errorWindow);
 
 	std::vector<ImageType>	m_exemplar;
+	std::vector<ImageType>	m_B;
+	std::vector<ImageType>	m_M;
 	Eigen::Vector2d			m_cycles[2];
 	bool					m_useCycles;
 	double					m_gamma;
@@ -97,6 +102,7 @@ private:
 	double					m_uvScale;
 	double					m_cyclicTransferRadius;
 	unsigned				m_cyclicTransferSamples;
+	EstimationType			m_estimationType;
 
 };
 
@@ -114,7 +120,8 @@ CSN_Texture<I>::CSN_Texture() :
 	m_useCyclicTransfer(false),
 	m_uvScale(1.0),
 	m_cyclicTransferRadius(0),
-	m_cyclicTransferSamples(1)
+	m_cyclicTransferSamples(1),
+	m_estimationType(MEAN)
 {}
 
 template<typename I>
@@ -125,15 +132,72 @@ CSN_Texture<I>::~CSN_Texture()
 template<typename I>
 void CSN_Texture<I>::setTexture(const ImageType &texture)
 {
-	m_exemplar.push_back(texture);
+	auto lmbd_M = [&](ImageType B, PixelType Bl, int xs, int ys, int xe, int ye) -> PixelType
+	{
+		PixelType pix;
+		float N = 0;
+		for (int x = xs; x < xe; x++) {
+			for (int y = ys; y < ye; y++) {
+				PixelType current = (B.pixelAbsolute(x, y) - Bl);
+				pix[0] += pow(current[0], 2);
+				pix[1] += pow(current[1], 2);
+				pix[2] += pow(current[2], 2);
+				N++;
+			}
+		}
+		pix /= N;
+		return pix;
+	};
+
+	ImageType tex(texture.width(), texture.height(), true);
+	ImageType B(texture.width(), texture.height(), true);
+	ImageType M(texture.width(), texture.height(), true);
+	for (int x = 0; x < texture.width(); x++) {
+		for (int y = 0; y < texture.height(); y++) {
+			PixelType pix = texture.pixelAbsolute(x, y);
+
+			//printf("pix %2.2f %2.2f %2.2f\n", pix[0], pix[1], pix[2]);
+			tex.pixelAbsolute(x, y) = texture.pixelAbsolute(x, y);
+
+			pix[0] = ((pix[0]) / (pix[2])) * 2 - 1;
+			pix[1] = ((pix[1]) / (pix[2])) * 2 - 1;
+			pix[2] = 0;
+
+			//pix[0] = std::min(1.0, std::max(0.0, pix[0]));
+			//pix[1] = std::min(1.0, std::max(0.0, pix[1]));
+			//printf("B   %2.2f %2.2f %2.2f\n", pix[0], pix[1], pix[2]);
+
+			B.pixelAbsolute(x, y) = pix;
+
+			pix[0] = pow(pix[0], 2);
+			pix[1] = pow(pix[1], 2);
+			pix[2] = pix[0] * pix[1];
+			//printf("M   %2.2f %2.2f %2.2f\n\n", pix[0], pix[1], pix[2]);
+			M.pixelAbsolute(x, y) = pix;
+		}
+	}
+
+	m_exemplar.push_back(tex);
+	m_B.push_back(B);
+	m_M.push_back(M);
+
+	IO::save01_in_u8(tex, std::to_string(0) + "mean.png");
+	IO::save01_in_u8(B, std::to_string(0) + "B.png");
+	IO::save01_in_u8(M, std::to_string(0) + "M.png");
+
 
 	//MIP MAPING
 	int width = texture.width() / 2;
 	int height = texture.height() / 2;
+	int size = 2;
 	int i = 1;
 	while (width > 0 && height > 0) {
 		ImageType map;
+		ImageType Bmap;
+		ImageType Mmap;
 		map.initItk(width, height, true);
+		Bmap.initItk(width, height, true);
+		Mmap.initItk(width, height, true);
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
 				PixelType mean;
@@ -143,14 +207,45 @@ void CSN_Texture<I>::setTexture(const ImageType &texture)
 				mean += m_exemplar[i - 1].pixelAbsolute(2 * x + 1, 2 * y + 1);
 				mean /= 4;
 				map.pixelAbsolute(x, y) = mean;
+
+				PixelType meanB;
+				meanB += m_B[i - 1].pixelAbsolute(2 * x    , 2 * y    );
+				meanB += m_B[i - 1].pixelAbsolute(2 * x + 1, 2 * y    );
+				meanB += m_B[i - 1].pixelAbsolute(2 * x    , 2 * y + 1);
+				meanB += m_B[i - 1].pixelAbsolute(2 * x + 1, 2 * y + 1);
+				meanB /= 4;
+				Bmap.pixelAbsolute(x, y) = meanB;
+
+				PixelType meanM;
+				meanM += m_M[i - 1].pixelAbsolute(2 * x    , 2 * y    );
+				meanM += m_M[i - 1].pixelAbsolute(2 * x + 1, 2 * y    );
+				meanM += m_M[i - 1].pixelAbsolute(2 * x    , 2 * y + 1);
+				meanM += m_M[i - 1].pixelAbsolute(2 * x + 1, 2 * y + 1);
+				meanM /= 4;
+				Mmap.pixelAbsolute(x, y) = meanM;
+
+				//PixelType meanM = lmbd_M(B, meanB, x * size, y * size, x * size + size, y * size + size);
+				//meanM[0] = std::min(1.0, std::max(0.0, meanM[0] * 10));
+				//meanM[1] = std::min(1.0, std::max(0.0, meanM[1] * 10));
+				//meanM[2] = 0;
+				//Mmap.pixelAbsolute(x, y) = meanM;
 			}
 		}
 		m_exemplar.push_back(map);
+		m_B.push_back(Bmap);
+		m_M.push_back(Mmap);
+
+		IO::save01_in_u8(map, std::to_string(i) + "mean.png");
+		IO::save01_in_u8(Bmap, std::to_string(i) + "B.png");
+		IO::save01_in_u8(Mmap, std::to_string(i) + "M.png");
 
 		width /= 2;
 		height /= 2;
+		size *= 2;
 		i++;
 	}
+
+
 }
 
 template<typename I>
@@ -216,6 +311,11 @@ void CSN_Texture<I>::setCyclicTransferPolicy(unsigned radius, unsigned samples)
 	m_cyclicTransferSamples = samples;
 }
 
+template<typename I>
+void CSN_Texture<I>::setEstimationType(EstimationType estimationType) {
+	m_estimationType = estimationType;
+}
+
 
 
 
@@ -233,7 +333,13 @@ typename CSN_Texture<I>::ImageType CSN_Texture<I>::synthesize(unsigned width, un
 	assert(height > 0);
 
 
-	ImageType exemplar = m_exemplar[miplevel];
+	ImageType exemplar;
+	if (m_estimationType == MEAN)
+		exemplar = m_exemplar[miplevel];
+	if (m_estimationType == LEAN_MEAN)
+		exemplar = m_B[miplevel];
+	if (m_estimationType == LEAN_VARIANCE)
+		exemplar = m_M[miplevel];
 
 	assert(exemplar.is_initialized());
 	if(width==0)
@@ -1353,6 +1459,7 @@ typename CSN_Texture<I>::PcaPixelType CSN_Texture<I>::proceduralTilingAndBlendin
 	float w1, w2, w3;
 	Eigen::Vector2i vertex1, vertex2, vertex3;
 	TriangleGrid(uv, w1, w2, w3, vertex1, vertex2, vertex3);
+
 	// Assign random offset to each triangle vertex
 
 	auto lmbd_hashFunction = [&](const Eigen::Vector2i &vec) -> Eigen::Vector2d
@@ -1380,8 +1487,14 @@ typename CSN_Texture<I>::PcaPixelType CSN_Texture<I>::proceduralTilingAndBlendin
 	PcaPixelType I1 = image.pixelAbsolute(lmbd_Vector2PixelPos(uv1));
 	PcaPixelType I2 = image.pixelAbsolute(lmbd_Vector2PixelPos(uv2));
 	PcaPixelType I3 = image.pixelAbsolute(lmbd_Vector2PixelPos(uv3));
+	
+	PcaPixelType color;
 	// Linear blending
-	PcaPixelType color = I1 * w1 + I2 * w2 + I3 * w3;
+	if (m_estimationType == MEAN || m_estimationType == LEAN_MEAN)
+		color = I1 * w1 + I2 * w2 + I3 * w3;
+	if (m_estimationType == LEAN_VARIANCE)
+		color = I1 * w1 + I2 * w2 + I3 * w3;//color = I1 * pow(w1, 2) + I2 * pow(w2, 2) + I3 * pow(w3, 2);
+
 	for(unsigned i=0; i<3; ++i)
 	{
 		color[i] -= 0.5;

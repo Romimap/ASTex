@@ -28,6 +28,7 @@ int main(int argc, char **argv)
     
     IO::loadu8_in_01(im_in, filename_in);
 	CSN::CSN_Texture<ImageType> csn;
+	csn.setEstimationType(ASTex::CSN::EstimationType::LEAN_VARIANCE);
 	csn.setTexture(im_in);
 
 //	//The following is how I produced the figure showing the distance map
@@ -38,11 +39,10 @@ int main(int argc, char **argv)
 	csn.setGamma(2);
 	csn.setUsePca(false);
 	csn.setUseGaussianTransfer(false);
-	csn.setUseYCbCr(true);
+	csn.setUseYCbCr(false);
 	csn.setUseCyclicTransfer(false);
 	csn.setUVScale(0.8);
-	csn.setCyclicTransferPolicy(1.5, 9);
-
+	csn.setCyclicTransferPolicy();
 
 	std::vector<ImageType> estimations;
     for (int i = 0; i < 10; i++) {

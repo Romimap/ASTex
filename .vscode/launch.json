@@ -10,8 +10,8 @@
             "request": "launch",
             "program": "${workspaceFolder}/build/bin/test_csnMipMapped",
             "args": [
-                "${workspaceFolder}/build/Bricks075A_1K_Color.png",
-                "${workspaceFolder}/build/Bricks.png"
+                "${workspaceFolder}/build/Bricks075A_1K_NormalGL.png",
+                "${workspaceFolder}/build/GaussianNormal.png"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

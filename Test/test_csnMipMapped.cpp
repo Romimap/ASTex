@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 //	IO::save01_in_u8(cycleEvaluationMap, std::string("/home/nlutz/cycleEvaluationMap129_") + textureName + ".png");
 
 	csn.setUseCycles(false);
-	csn.setGamma(2);
+	csn.setGamma(1);
 	csn.setUsePca(false);
 	csn.setUseGaussianTransfer(false);
 	csn.setUseYCbCr(false);

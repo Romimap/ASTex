@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/build/bin/test_csnMipMapped",
             "args": [
                 "${workspaceFolder}/build/Bricks075A_1K_NormalGL.png",
-                "${workspaceFolder}/build/GaussianNormal.png"
+                "${workspaceFolder}/build/BrickVar.png"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

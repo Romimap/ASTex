@@ -216,19 +216,19 @@ void CSN_Texture<I>::setTexture(const ImageType &texture)
 				meanB /= 4;
 				Bmap.pixelAbsolute(x, y) = meanB;
 
-				PixelType meanM;
-				meanM += m_M[i - 1].pixelAbsolute(2 * x    , 2 * y    );
-				meanM += m_M[i - 1].pixelAbsolute(2 * x + 1, 2 * y    );
-				meanM += m_M[i - 1].pixelAbsolute(2 * x    , 2 * y + 1);
-				meanM += m_M[i - 1].pixelAbsolute(2 * x + 1, 2 * y + 1);
-				meanM /= 4;
-				Mmap.pixelAbsolute(x, y) = meanM;
-
-				//PixelType meanM = lmbd_M(B, meanB, x * size, y * size, x * size + size, y * size + size);
-				//meanM[0] = std::min(1.0, std::max(0.0, meanM[0] * 10));
-				//meanM[1] = std::min(1.0, std::max(0.0, meanM[1] * 10));
-				//meanM[2] = 0;
+				//PixelType meanM;
+				//meanM += m_M[i - 1].pixelAbsolute(2 * x    , 2 * y    );
+				//meanM += m_M[i - 1].pixelAbsolute(2 * x + 1, 2 * y    );
+				//meanM += m_M[i - 1].pixelAbsolute(2 * x    , 2 * y + 1);
+				//meanM += m_M[i - 1].pixelAbsolute(2 * x + 1, 2 * y + 1);
+				//meanM /= 4;
 				//Mmap.pixelAbsolute(x, y) = meanM;
+
+				PixelType meanM = lmbd_M(B, meanB, x * size, y * size, x * size + size, y * size + size);
+				meanM[0] = std::min(1.0, std::max(0.0, meanM[0] * 10));
+				meanM[1] = std::min(1.0, std::max(0.0, meanM[1] * 10));
+				meanM[2] = 0;
+				Mmap.pixelAbsolute(x, y) = meanM;
 			}
 		}
 		m_exemplar.push_back(map);
@@ -237,7 +237,7 @@ void CSN_Texture<I>::setTexture(const ImageType &texture)
 
 		IO::save01_in_u8(map, std::to_string(i) + "mean.png");
 		IO::save01_in_u8(Bmap, std::to_string(i) + "B.png");
-		IO::save01_in_u8(Mmap, std::to_string(i) + "M.png");
+		IO::save01_in_u8(Mmap, std::to_string(i) + "Me.png");
 
 		width /= 2;
 		height /= 2;
@@ -1459,7 +1459,6 @@ typename CSN_Texture<I>::PcaPixelType CSN_Texture<I>::proceduralTilingAndBlendin
 	float w1, w2, w3;
 	Eigen::Vector2i vertex1, vertex2, vertex3;
 	TriangleGrid(uv, w1, w2, w3, vertex1, vertex2, vertex3);
-
 	// Assign random offset to each triangle vertex
 
 	auto lmbd_hashFunction = [&](const Eigen::Vector2i &vec) -> Eigen::Vector2d
@@ -1493,12 +1492,13 @@ typename CSN_Texture<I>::PcaPixelType CSN_Texture<I>::proceduralTilingAndBlendin
 	if (m_estimationType == MEAN || m_estimationType == LEAN_MEAN)
 		color = I1 * w1 + I2 * w2 + I3 * w3;
 	if (m_estimationType == LEAN_VARIANCE)
-		color = I1 * w1 + I2 * w2 + I3 * w3;//color = I1 * pow(w1, 2) + I2 * pow(w2, 2) + I3 * pow(w3, 2);
+		color = I1 * pow(w1, 1) + I2 * pow(w2, 1) + I3 * pow(w3, 1);
+		//color = I1 * w1 + I2 * w2 + I3 * w3;
 
 	for(unsigned i=0; i<3; ++i)
 	{
 		color[i] -= 0.5;
-		color[i] /= std::sqrt(w1*w1 + w2*w2 + w3*w3);
+		color[i] /= pow(std::sqrt(w1*w1 + w2*w2 + w3*w3), 2);
 		color[i] += 0.5;
 	}
 	return color;

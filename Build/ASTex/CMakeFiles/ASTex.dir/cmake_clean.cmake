@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/ASTex.dir/Stamping/sampler.cpp.o"
+  "CMakeFiles/ASTex.dir/Stamping/sampler.cpp.o.d"
+  "CMakeFiles/ASTex.dir/bilateral_filters.cpp.o"
+  "CMakeFiles/ASTex.dir/bilateral_filters.cpp.o.d"
+  "CMakeFiles/ASTex.dir/distances_maps.cpp.o"
+  "CMakeFiles/ASTex.dir/distances_maps.cpp.o.d"
+  "CMakeFiles/ASTex.dir/easy_io.cpp.o"
+  "CMakeFiles/ASTex.dir/easy_io.cpp.o.d"
+  "CMakeFiles/ASTex.dir/exr_io.cpp.o"
+  "CMakeFiles/ASTex.dir/exr_io.cpp.o.d"
+  "CMakeFiles/ASTex.dir/file_paths.cpp.o"
+  "CMakeFiles/ASTex.dir/file_paths.cpp.o.d"
+  "CMakeFiles/ASTex.dir/fourier.cpp.o"
+  "CMakeFiles/ASTex.dir/fourier.cpp.o.d"
+  "CMakeFiles/ASTex.dir/image_collector.cpp.o"
+  "CMakeFiles/ASTex.dir/image_collector.cpp.o.d"
+  "CMakeFiles/ASTex.dir/local_spectrum.cpp.o"
+  "CMakeFiles/ASTex.dir/local_spectrum.cpp.o.d"
+  "CMakeFiles/ASTex.dir/mask.cpp.o"
+  "CMakeFiles/ASTex.dir/mask.cpp.o.d"
+  "CMakeFiles/ASTex.dir/pca.cpp.o"
+  "CMakeFiles/ASTex.dir/pca.cpp.o.d"
+  "CMakeFiles/ASTex.dir/png_indexed_io.cpp.o"
+  "CMakeFiles/ASTex.dir/png_indexed_io.cpp.o.d"
+  "CMakeFiles/ASTex.dir/rpn_utils.cpp.o"
+  "CMakeFiles/ASTex.dir/rpn_utils.cpp.o.d"
+  "CMakeFiles/ASTex.dir/special_io.cpp.o"
+  "CMakeFiles/ASTex.dir/special_io.cpp.o.d"
+  "CMakeFiles/ASTex.dir/texton_io.cpp.o"
+  "CMakeFiles/ASTex.dir/texton_io.cpp.o.d"
+  "CMakeFiles/ASTex.dir/thread_pool.cpp.o"
+  "CMakeFiles/ASTex.dir/thread_pool.cpp.o.d"
+  "libASTex.a"
+  "libASTex.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/ASTex.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

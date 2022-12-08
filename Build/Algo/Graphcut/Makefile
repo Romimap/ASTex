@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rfournier/Git/ASTex
+CMAKE_SOURCE_DIR = /home/romimap/Git/ASTex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rfournier/Git/ASTex/Build
+CMAKE_BINARY_DIR = /home/romimap/Git/ASTex/Build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/rfournier/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_progress_start /home/rfournier/Git/ASTex/Build/CMakeFiles /home/rfournier/Git/ASTex/Build/Algo/Graphcut//CMakeFiles/progress.marks
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rfournier/Git/ASTex/Build/CMakeFiles 0
+	cd /home/romimap/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_progress_start /home/romimap/Git/ASTex/Build/CMakeFiles /home/romimap/Git/ASTex/Build/Algo/Graphcut//CMakeFiles/progress.marks
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/romimap/Git/ASTex/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/clean
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/preinstall
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/preinstall
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/rfournier/Git/ASTex/Build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/romimap/Git/ASTex/Build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 Algo/Graphcut/CMakeFiles/test_graphcut.dir/rule:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/CMakeFiles/test_graphcut.dir/rule
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/CMakeFiles/test_graphcut.dir/rule
 .PHONY : Algo/Graphcut/CMakeFiles/test_graphcut.dir/rule
 
 # Convenience name for target.
@@ -172,12 +172,12 @@ test_graphcut: Algo/Graphcut/CMakeFiles/test_graphcut.dir/rule
 
 # fast build rule for target.
 test_graphcut/fast:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/build
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/build
 .PHONY : test_graphcut/fast
 
 # Convenience name for target.
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/rule:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/rule
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/rule
 .PHONY : Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/rule
 
 # Convenience name for target.
@@ -186,7 +186,7 @@ test_graphcut_2: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/rule
 
 # fast build rule for target.
 test_graphcut_2/fast:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build
 .PHONY : test_graphcut_2/fast
 
 graphcut.o: graphcut.cpp.o
@@ -194,8 +194,8 @@ graphcut.o: graphcut.cpp.o
 
 # target to build an object file
 graphcut.cpp.o:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/graphcut.cpp.o
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/graphcut.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o
 .PHONY : graphcut.cpp.o
 
 graphcut.i: graphcut.cpp.i
@@ -203,8 +203,8 @@ graphcut.i: graphcut.cpp.i
 
 # target to preprocess a source file
 graphcut.cpp.i:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/graphcut.cpp.i
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/graphcut.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.i
 .PHONY : graphcut.cpp.i
 
 graphcut.s: graphcut.cpp.s
@@ -212,8 +212,8 @@ graphcut.s: graphcut.cpp.s
 
 # target to generate assembly for a file
 graphcut.cpp.s:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/graphcut.cpp.s
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/graphcut.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.s
 .PHONY : graphcut.cpp.s
 
 maxflow/graph.o: maxflow/graph.cpp.o
@@ -221,8 +221,8 @@ maxflow/graph.o: maxflow/graph.cpp.o
 
 # target to build an object file
 maxflow/graph.cpp.o:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/graph.cpp.o
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/graph.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o
 .PHONY : maxflow/graph.cpp.o
 
 maxflow/graph.i: maxflow/graph.cpp.i
@@ -230,8 +230,8 @@ maxflow/graph.i: maxflow/graph.cpp.i
 
 # target to preprocess a source file
 maxflow/graph.cpp.i:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/graph.cpp.i
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/graph.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.i
 .PHONY : maxflow/graph.cpp.i
 
 maxflow/graph.s: maxflow/graph.cpp.s
@@ -239,8 +239,8 @@ maxflow/graph.s: maxflow/graph.cpp.s
 
 # target to generate assembly for a file
 maxflow/graph.cpp.s:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/graph.cpp.s
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/graph.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.s
 .PHONY : maxflow/graph.cpp.s
 
 maxflow/maxflow.o: maxflow/maxflow.cpp.o
@@ -248,8 +248,8 @@ maxflow/maxflow.o: maxflow/maxflow.cpp.o
 
 # target to build an object file
 maxflow/maxflow.cpp.o:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/maxflow.cpp.o
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/maxflow.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o
 .PHONY : maxflow/maxflow.cpp.o
 
 maxflow/maxflow.i: maxflow/maxflow.cpp.i
@@ -257,8 +257,8 @@ maxflow/maxflow.i: maxflow/maxflow.cpp.i
 
 # target to preprocess a source file
 maxflow/maxflow.cpp.i:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/maxflow.cpp.i
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/maxflow.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.i
 .PHONY : maxflow/maxflow.cpp.i
 
 maxflow/maxflow.s: maxflow/maxflow.cpp.s
@@ -266,8 +266,8 @@ maxflow/maxflow.s: maxflow/maxflow.cpp.s
 
 # target to generate assembly for a file
 maxflow/maxflow.cpp.s:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/maxflow.cpp.s
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/maxflow/maxflow.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.s
 .PHONY : maxflow/maxflow.cpp.s
 
 test_graphcut.o: test_graphcut.cpp.o
@@ -275,7 +275,7 @@ test_graphcut.o: test_graphcut.cpp.o
 
 # target to build an object file
 test_graphcut.cpp.o:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/test_graphcut.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/test_graphcut.cpp.o
 .PHONY : test_graphcut.cpp.o
 
 test_graphcut.i: test_graphcut.cpp.i
@@ -283,7 +283,7 @@ test_graphcut.i: test_graphcut.cpp.i
 
 # target to preprocess a source file
 test_graphcut.cpp.i:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/test_graphcut.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/test_graphcut.cpp.i
 .PHONY : test_graphcut.cpp.i
 
 test_graphcut.s: test_graphcut.cpp.s
@@ -291,7 +291,7 @@ test_graphcut.s: test_graphcut.cpp.s
 
 # target to generate assembly for a file
 test_graphcut.cpp.s:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/test_graphcut.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut.dir/test_graphcut.cpp.s
 .PHONY : test_graphcut.cpp.s
 
 test_graphcut_2.o: test_graphcut_2.cpp.o
@@ -299,7 +299,7 @@ test_graphcut_2.o: test_graphcut_2.cpp.o
 
 # target to build an object file
 test_graphcut_2.cpp.o:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o
 .PHONY : test_graphcut_2.cpp.o
 
 test_graphcut_2.i: test_graphcut_2.cpp.i
@@ -307,7 +307,7 @@ test_graphcut_2.i: test_graphcut_2.cpp.i
 
 # target to preprocess a source file
 test_graphcut_2.cpp.i:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.i
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.i
 .PHONY : test_graphcut_2.cpp.i
 
 test_graphcut_2.s: test_graphcut_2.cpp.s
@@ -315,7 +315,7 @@ test_graphcut_2.s: test_graphcut_2.cpp.s
 
 # target to generate assembly for a file
 test_graphcut_2.cpp.s:
-	cd /home/rfournier/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.s
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build.make Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.s
 .PHONY : test_graphcut_2.cpp.s
 
 # Help Target
@@ -358,6 +358,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/rfournier/Git/ASTex/Build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/romimap/Git/ASTex/Build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rfournier/Git/ASTex
+CMAKE_SOURCE_DIR = /home/romimap/Git/ASTex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rfournier/Git/ASTex/Build
+CMAKE_BINARY_DIR = /home/romimap/Git/ASTex/Build
 
 # Include any dependencies generated for this target.
 include Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/depend.make
@@ -72,58 +72,58 @@ include Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/flags.make
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/flags.make
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o: ../Algo/Graphcut/test_graphcut_2.cpp
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o -MF CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o -c /home/rfournier/Git/ASTex/Algo/Graphcut/test_graphcut_2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o"
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o -MF CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.o -c /home/romimap/Git/ASTex/Algo/Graphcut/test_graphcut_2.cpp
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.i"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/Graphcut/test_graphcut_2.cpp > CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.i
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/Graphcut/test_graphcut_2.cpp > CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.i
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.s"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/Graphcut/test_graphcut_2.cpp -o CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.s
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/Graphcut/test_graphcut_2.cpp -o CMakeFiles/test_graphcut_2.dir/test_graphcut_2.cpp.s
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/flags.make
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o: ../Algo/Graphcut/graphcut.cpp
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o -MF CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o -c /home/rfournier/Git/ASTex/Algo/Graphcut/graphcut.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o"
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o -MF CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/graphcut.cpp.o -c /home/romimap/Git/ASTex/Algo/Graphcut/graphcut.cpp
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_graphcut_2.dir/graphcut.cpp.i"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/Graphcut/graphcut.cpp > CMakeFiles/test_graphcut_2.dir/graphcut.cpp.i
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/Graphcut/graphcut.cpp > CMakeFiles/test_graphcut_2.dir/graphcut.cpp.i
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/graphcut.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_graphcut_2.dir/graphcut.cpp.s"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/Graphcut/graphcut.cpp -o CMakeFiles/test_graphcut_2.dir/graphcut.cpp.s
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/Graphcut/graphcut.cpp -o CMakeFiles/test_graphcut_2.dir/graphcut.cpp.s
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/flags.make
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o: ../Algo/Graphcut/maxflow/graph.cpp
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o -MF CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o -c /home/rfournier/Git/ASTex/Algo/Graphcut/maxflow/graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o"
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o -MF CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.o -c /home/romimap/Git/ASTex/Algo/Graphcut/maxflow/graph.cpp
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.i"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/Graphcut/maxflow/graph.cpp > CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.i
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/Graphcut/maxflow/graph.cpp > CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.i
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.s"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/Graphcut/maxflow/graph.cpp -o CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.s
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/Graphcut/maxflow/graph.cpp -o CMakeFiles/test_graphcut_2.dir/maxflow/graph.cpp.s
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/flags.make
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o: ../Algo/Graphcut/maxflow/maxflow.cpp
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o -MF CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o -c /home/rfournier/Git/ASTex/Algo/Graphcut/maxflow/maxflow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o"
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o -MF CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o.d -o CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.o -c /home/romimap/Git/ASTex/Algo/Graphcut/maxflow/maxflow.cpp
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.i"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/Graphcut/maxflow/maxflow.cpp > CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.i
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/Graphcut/maxflow/maxflow.cpp > CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.i
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.s"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/Graphcut/maxflow/maxflow.cpp -o CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.s
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/Graphcut/maxflow/maxflow.cpp -o CMakeFiles/test_graphcut_2.dir/maxflow/maxflow.cpp.s
 
 # Object files for target test_graphcut_2
 test_graphcut_2_OBJECTS = \
@@ -269,18 +269,18 @@ bin/test_graphcut_2: /usr/lib/x86_64-linux-gnu/libHalf-2_5.so
 bin/test_graphcut_2: /usr/lib/x86_64-linux-gnu/libIex-2_5.so
 bin/test_graphcut_2: /usr/lib/x86_64-linux-gnu/libImath-2_5.so
 bin/test_graphcut_2: Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/test_graphcut_2"
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_graphcut_2.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/test_graphcut_2"
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_graphcut_2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build: bin/test_graphcut_2
 .PHONY : Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/build
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/clean:
-	cd /home/rfournier/Git/ASTex/Build/Algo/Graphcut && $(CMAKE_COMMAND) -P CMakeFiles/test_graphcut_2.dir/cmake_clean.cmake
+	cd /home/romimap/Git/ASTex/Build/Algo/Graphcut && $(CMAKE_COMMAND) -P CMakeFiles/test_graphcut_2.dir/cmake_clean.cmake
 .PHONY : Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/clean
 
 Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/depend:
-	cd /home/rfournier/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rfournier/Git/ASTex /home/rfournier/Git/ASTex/Algo/Graphcut /home/rfournier/Git/ASTex/Build /home/rfournier/Git/ASTex/Build/Algo/Graphcut /home/rfournier/Git/ASTex/Build/Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/romimap/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/romimap/Git/ASTex /home/romimap/Git/ASTex/Algo/Graphcut /home/romimap/Git/ASTex/Build /home/romimap/Git/ASTex/Build/Algo/Graphcut /home/romimap/Git/ASTex/Build/Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Algo/Graphcut/CMakeFiles/test_graphcut_2.dir/depend
 

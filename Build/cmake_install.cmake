@@ -1,4 +1,4 @@
-# Install script for directory: /home/rfournier/Git/ASTex
+# Install script for directory: /home/romimap/Git/ASTex
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,18 +44,18 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/rfournier/Git/ASTex/Build/ASTex/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Bench/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Test/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Tuto/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/BLTS/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/Graphcut/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/PatchExchange/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/PatchMatch/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/PerioSmooth/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/Quilting/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/TextonNoiseAnalysis/cmake_install.cmake")
-  include("/home/rfournier/Git/ASTex/Build/Algo/WangTiles/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/ASTex/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Bench/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Test/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Tuto/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/BLTS/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/Graphcut/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/PatchExchange/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/PatchMatch/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/PerioSmooth/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/Quilting/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/TextonNoiseAnalysis/cmake_install.cmake")
+  include("/home/romimap/Git/ASTex/Build/Algo/WangTiles/cmake_install.cmake")
 
 endif()
 
@@ -67,5 +67,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/rfournier/Git/ASTex/Build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/romimap/Git/ASTex/Build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

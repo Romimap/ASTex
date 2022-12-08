@@ -1,4 +1,4 @@
-# Install script for directory: /home/rfournier/Git/ASTex/Algo/Quilting
+# Install script for directory: /home/romimap/Git/ASTex/Algo/Quilting
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

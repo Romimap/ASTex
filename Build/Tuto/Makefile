@@ -386,42 +386,42 @@ tuto_store/fast:
 .PHONY : tuto_store/fast
 
 # Convenience name for target.
-Tuto/CMakeFiles/mh_groundtruth.dir/rule:
-	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tuto/CMakeFiles/mh_groundtruth.dir/rule
-.PHONY : Tuto/CMakeFiles/mh_groundtruth.dir/rule
+Tuto/CMakeFiles/mh_tests.dir/rule:
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tuto/CMakeFiles/mh_tests.dir/rule
+.PHONY : Tuto/CMakeFiles/mh_tests.dir/rule
 
 # Convenience name for target.
-mh_groundtruth: Tuto/CMakeFiles/mh_groundtruth.dir/rule
-.PHONY : mh_groundtruth
+mh_tests: Tuto/CMakeFiles/mh_tests.dir/rule
+.PHONY : mh_tests
 
 # fast build rule for target.
-mh_groundtruth/fast:
-	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/build
-.PHONY : mh_groundtruth/fast
+mh_tests/fast:
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/build
+.PHONY : mh_tests/fast
 
-mh_groundtruth.o: mh_groundtruth.cpp.o
-.PHONY : mh_groundtruth.o
+mh_tests.o: mh_tests.cpp.o
+.PHONY : mh_tests.o
 
 # target to build an object file
-mh_groundtruth.cpp.o:
-	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/mh_groundtruth.cpp.o
-.PHONY : mh_groundtruth.cpp.o
+mh_tests.cpp.o:
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/mh_tests.cpp.o
+.PHONY : mh_tests.cpp.o
 
-mh_groundtruth.i: mh_groundtruth.cpp.i
-.PHONY : mh_groundtruth.i
+mh_tests.i: mh_tests.cpp.i
+.PHONY : mh_tests.i
 
 # target to preprocess a source file
-mh_groundtruth.cpp.i:
-	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/mh_groundtruth.cpp.i
-.PHONY : mh_groundtruth.cpp.i
+mh_tests.cpp.i:
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/mh_tests.cpp.i
+.PHONY : mh_tests.cpp.i
 
-mh_groundtruth.s: mh_groundtruth.cpp.s
-.PHONY : mh_groundtruth.s
+mh_tests.s: mh_tests.cpp.s
+.PHONY : mh_tests.s
 
 # target to generate assembly for a file
-mh_groundtruth.cpp.s:
-	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/mh_groundtruth.cpp.s
-.PHONY : mh_groundtruth.cpp.s
+mh_tests.cpp.s:
+	cd /home/romimap/Git/ASTex/Build && $(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/mh_tests.cpp.s
+.PHONY : mh_tests.cpp.s
 
 tuto_color_filters.o: tuto_color_filters.cpp.o
 .PHONY : tuto_color_filters.o
@@ -819,7 +819,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... mh_groundtruth"
+	@echo "... mh_tests"
 	@echo "... tuto_color_filters"
 	@echo "... tuto_filter1"
 	@echo "... tuto_filter2"
@@ -836,9 +836,9 @@ help:
 	@echo "... tuto_store"
 	@echo "... tuto_traverse_for_all"
 	@echo "... tuto_traverse_iterators"
-	@echo "... mh_groundtruth.o"
-	@echo "... mh_groundtruth.i"
-	@echo "... mh_groundtruth.s"
+	@echo "... mh_tests.o"
+	@echo "... mh_tests.i"
+	@echo "... mh_tests.s"
 	@echo "... tuto_color_filters.o"
 	@echo "... tuto_color_filters.i"
 	@echo "... tuto_color_filters.s"

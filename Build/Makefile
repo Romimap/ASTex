@@ -461,17 +461,17 @@ tuto_store/fast:
 .PHONY : tuto_store/fast
 
 #=============================================================================
-# Target rules for targets named mh_groundtruth
+# Target rules for targets named mh_tests
 
 # Build rule for target.
-mh_groundtruth: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mh_groundtruth
-.PHONY : mh_groundtruth
+mh_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mh_tests
+.PHONY : mh_tests
 
 # fast build rule for target.
-mh_groundtruth/fast:
-	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/build
-.PHONY : mh_groundtruth/fast
+mh_tests/fast:
+	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/build
+.PHONY : mh_tests/fast
 
 #=============================================================================
 # Target rules for targets named blt_synthesis
@@ -658,7 +658,7 @@ help:
 	@echo "... bench_eigen_pixels"
 	@echo "... bench_traversals"
 	@echo "... blt_synthesis"
-	@echo "... mh_groundtruth"
+	@echo "... mh_tests"
 	@echo "... nlutz_tests"
 	@echo "... perio_smooth"
 	@echo "... perio_smooth_color"

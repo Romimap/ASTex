@@ -297,7 +297,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "Tuto/CMakeFiles/tuto_filter7.dir/DependInfo.cmake"
   "Tuto/CMakeFiles/tuto_png_indexed.dir/DependInfo.cmake"
   "Tuto/CMakeFiles/tuto_store.dir/DependInfo.cmake"
-  "Tuto/CMakeFiles/mh_groundtruth.dir/DependInfo.cmake"
+  "Tuto/CMakeFiles/mh_tests.dir/DependInfo.cmake"
   "Algo/BLTS/CMakeFiles/blt_synthesis.dir/DependInfo.cmake"
   "Algo/BLTS/CMakeFiles/test_noise_filter.dir/DependInfo.cmake"
   "Algo/BLTS/CMakeFiles/test_noise_kmean.dir/DependInfo.cmake"

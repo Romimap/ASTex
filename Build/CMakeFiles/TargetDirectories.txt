@@ -45,7 +45,7 @@
 /home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/tuto_filter7.dir
 /home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/tuto_png_indexed.dir
 /home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/tuto_store.dir
-/home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/mh_groundtruth.dir
+/home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/mh_tests.dir
 /home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/edit_cache.dir
 /home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/rebuild_cache.dir
 /home/romimap/Git/ASTex/Build/Tuto/CMakeFiles/list_install_components.dir

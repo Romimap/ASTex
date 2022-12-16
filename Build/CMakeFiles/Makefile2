@@ -310,7 +310,7 @@ Tuto/all: Tuto/CMakeFiles/tuto_filter6.dir/all
 Tuto/all: Tuto/CMakeFiles/tuto_filter7.dir/all
 Tuto/all: Tuto/CMakeFiles/tuto_png_indexed.dir/all
 Tuto/all: Tuto/CMakeFiles/tuto_store.dir/all
-Tuto/all: Tuto/CMakeFiles/mh_groundtruth.dir/all
+Tuto/all: Tuto/CMakeFiles/mh_tests.dir/all
 .PHONY : Tuto/all
 
 # Recursive "preinstall" directory target.
@@ -334,7 +334,7 @@ Tuto/clean: Tuto/CMakeFiles/tuto_filter6.dir/clean
 Tuto/clean: Tuto/CMakeFiles/tuto_filter7.dir/clean
 Tuto/clean: Tuto/CMakeFiles/tuto_png_indexed.dir/clean
 Tuto/clean: Tuto/CMakeFiles/tuto_store.dir/clean
-Tuto/clean: Tuto/CMakeFiles/mh_groundtruth.dir/clean
+Tuto/clean: Tuto/CMakeFiles/mh_tests.dir/clean
 .PHONY : Tuto/clean
 
 #=============================================================================
@@ -936,30 +936,30 @@ Tuto/CMakeFiles/tuto_store.dir/clean:
 .PHONY : Tuto/CMakeFiles/tuto_store.dir/clean
 
 #=============================================================================
-# Target rules for target Tuto/CMakeFiles/mh_groundtruth.dir
+# Target rules for target Tuto/CMakeFiles/mh_tests.dir
 
 # All Build rule for target.
-Tuto/CMakeFiles/mh_groundtruth.dir/all: ASTex/CMakeFiles/ASTex.dir/all
-	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/depend
-	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=26,27 "Built target mh_groundtruth"
-.PHONY : Tuto/CMakeFiles/mh_groundtruth.dir/all
+Tuto/CMakeFiles/mh_tests.dir/all: ASTex/CMakeFiles/ASTex.dir/all
+	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=26,27 "Built target mh_tests"
+.PHONY : Tuto/CMakeFiles/mh_tests.dir/all
 
 # Build rule for subdir invocation for target.
-Tuto/CMakeFiles/mh_groundtruth.dir/rule: cmake_check_build_system
+Tuto/CMakeFiles/mh_tests.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/romimap/Git/ASTex/Build/CMakeFiles 17
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tuto/CMakeFiles/mh_groundtruth.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tuto/CMakeFiles/mh_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/romimap/Git/ASTex/Build/CMakeFiles 0
-.PHONY : Tuto/CMakeFiles/mh_groundtruth.dir/rule
+.PHONY : Tuto/CMakeFiles/mh_tests.dir/rule
 
 # Convenience name for target.
-mh_groundtruth: Tuto/CMakeFiles/mh_groundtruth.dir/rule
-.PHONY : mh_groundtruth
+mh_tests: Tuto/CMakeFiles/mh_tests.dir/rule
+.PHONY : mh_tests
 
 # clean rule for target.
-Tuto/CMakeFiles/mh_groundtruth.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_groundtruth.dir/build.make Tuto/CMakeFiles/mh_groundtruth.dir/clean
-.PHONY : Tuto/CMakeFiles/mh_groundtruth.dir/clean
+Tuto/CMakeFiles/mh_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tuto/CMakeFiles/mh_tests.dir/build.make Tuto/CMakeFiles/mh_tests.dir/clean
+.PHONY : Tuto/CMakeFiles/mh_tests.dir/clean
 
 #=============================================================================
 # Target rules for target Algo/BLTS/CMakeFiles/blt_synthesis.dir

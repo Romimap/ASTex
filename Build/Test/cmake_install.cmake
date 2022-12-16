@@ -1,4 +1,4 @@
-# Install script for directory: /home/romimap/Git/ASTex/Test
+# Install script for directory: /home/rfournier/Git/ASTex/Test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

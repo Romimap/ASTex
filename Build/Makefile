@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/romimap/Git/ASTex
+CMAKE_SOURCE_DIR = /home/rfournier/Git/ASTex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/romimap/Git/ASTex/Build
+CMAKE_BINARY_DIR = /home/rfournier/Git/ASTex/Build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/romimap/Git/ASTex/Build/CMakeFiles /home/romimap/Git/ASTex/Build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rfournier/Git/ASTex/Build/CMakeFiles /home/rfournier/Git/ASTex/Build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/romimap/Git/ASTex/Build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rfournier/Git/ASTex/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

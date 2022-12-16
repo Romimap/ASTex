@@ -25,7 +25,7 @@ endmacro()
 ####################################################################################
 
 set(ASTEX_LIBRARIES "ASTex")
-set(ASTEX_INCLUDE_DIRS "/home/romimap/Git/ASTex")
+set(ASTEX_INCLUDE_DIRS "/home/rfournier/Git/ASTex")
 set(ITK_DIR "/usr/lib/cmake/ITK-4.13")
 
 #list(APPEND CMAKE_MODULE_PATH "${ASTEX_INCLUDE_DIRS}/../lib/cmake/ASTex")

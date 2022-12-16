@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/romimap/Git/ASTex
+CMAKE_SOURCE_DIR = /home/rfournier/Git/ASTex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/romimap/Git/ASTex/Build
+CMAKE_BINARY_DIR = /home/rfournier/Git/ASTex/Build
 
 # Include any dependencies generated for this target.
 include Algo/Quilting/CMakeFiles/test_quilting.dir/depend.make
@@ -72,44 +72,44 @@ include Algo/Quilting/CMakeFiles/test_quilting.dir/flags.make
 Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.o: Algo/Quilting/CMakeFiles/test_quilting.dir/flags.make
 Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.o: ../Algo/Quilting/test_quilting.cpp
 Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.o: Algo/Quilting/CMakeFiles/test_quilting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.o"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.o -MF CMakeFiles/test_quilting.dir/test_quilting.cpp.o.d -o CMakeFiles/test_quilting.dir/test_quilting.cpp.o -c /home/romimap/Git/ASTex/Algo/Quilting/test_quilting.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.o"
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.o -MF CMakeFiles/test_quilting.dir/test_quilting.cpp.o.d -o CMakeFiles/test_quilting.dir/test_quilting.cpp.o -c /home/rfournier/Git/ASTex/Algo/Quilting/test_quilting.cpp
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_quilting.dir/test_quilting.cpp.i"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/Quilting/test_quilting.cpp > CMakeFiles/test_quilting.dir/test_quilting.cpp.i
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/Quilting/test_quilting.cpp > CMakeFiles/test_quilting.dir/test_quilting.cpp.i
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/test_quilting.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_quilting.dir/test_quilting.cpp.s"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/Quilting/test_quilting.cpp -o CMakeFiles/test_quilting.dir/test_quilting.cpp.s
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/Quilting/test_quilting.cpp -o CMakeFiles/test_quilting.dir/test_quilting.cpp.s
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.o: Algo/Quilting/CMakeFiles/test_quilting.dir/flags.make
 Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.o: ../Algo/Quilting/quilting.cpp
 Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.o: Algo/Quilting/CMakeFiles/test_quilting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.o"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.o -MF CMakeFiles/test_quilting.dir/quilting.cpp.o.d -o CMakeFiles/test_quilting.dir/quilting.cpp.o -c /home/romimap/Git/ASTex/Algo/Quilting/quilting.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.o"
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.o -MF CMakeFiles/test_quilting.dir/quilting.cpp.o.d -o CMakeFiles/test_quilting.dir/quilting.cpp.o -c /home/rfournier/Git/ASTex/Algo/Quilting/quilting.cpp
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_quilting.dir/quilting.cpp.i"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/Quilting/quilting.cpp > CMakeFiles/test_quilting.dir/quilting.cpp.i
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/Quilting/quilting.cpp > CMakeFiles/test_quilting.dir/quilting.cpp.i
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/quilting.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_quilting.dir/quilting.cpp.s"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/Quilting/quilting.cpp -o CMakeFiles/test_quilting.dir/quilting.cpp.s
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/Quilting/quilting.cpp -o CMakeFiles/test_quilting.dir/quilting.cpp.s
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.o: Algo/Quilting/CMakeFiles/test_quilting.dir/flags.make
 Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.o: ../Algo/Quilting/error_buffer.cpp
 Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.o: Algo/Quilting/CMakeFiles/test_quilting.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.o"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.o -MF CMakeFiles/test_quilting.dir/error_buffer.cpp.o.d -o CMakeFiles/test_quilting.dir/error_buffer.cpp.o -c /home/romimap/Git/ASTex/Algo/Quilting/error_buffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.o"
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.o -MF CMakeFiles/test_quilting.dir/error_buffer.cpp.o.d -o CMakeFiles/test_quilting.dir/error_buffer.cpp.o -c /home/rfournier/Git/ASTex/Algo/Quilting/error_buffer.cpp
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_quilting.dir/error_buffer.cpp.i"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/Quilting/error_buffer.cpp > CMakeFiles/test_quilting.dir/error_buffer.cpp.i
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/Quilting/error_buffer.cpp > CMakeFiles/test_quilting.dir/error_buffer.cpp.i
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/error_buffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_quilting.dir/error_buffer.cpp.s"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/Quilting/error_buffer.cpp -o CMakeFiles/test_quilting.dir/error_buffer.cpp.s
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/Quilting/error_buffer.cpp -o CMakeFiles/test_quilting.dir/error_buffer.cpp.s
 
 # Object files for target test_quilting
 test_quilting_OBJECTS = \
@@ -253,18 +253,18 @@ bin/test_quilting: /usr/lib/x86_64-linux-gnu/libHalf-2_5.so
 bin/test_quilting: /usr/lib/x86_64-linux-gnu/libIex-2_5.so
 bin/test_quilting: /usr/lib/x86_64-linux-gnu/libImath-2_5.so
 bin/test_quilting: Algo/Quilting/CMakeFiles/test_quilting.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/test_quilting"
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_quilting.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../../bin/test_quilting"
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_quilting.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Algo/Quilting/CMakeFiles/test_quilting.dir/build: bin/test_quilting
 .PHONY : Algo/Quilting/CMakeFiles/test_quilting.dir/build
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/clean:
-	cd /home/romimap/Git/ASTex/Build/Algo/Quilting && $(CMAKE_COMMAND) -P CMakeFiles/test_quilting.dir/cmake_clean.cmake
+	cd /home/rfournier/Git/ASTex/Build/Algo/Quilting && $(CMAKE_COMMAND) -P CMakeFiles/test_quilting.dir/cmake_clean.cmake
 .PHONY : Algo/Quilting/CMakeFiles/test_quilting.dir/clean
 
 Algo/Quilting/CMakeFiles/test_quilting.dir/depend:
-	cd /home/romimap/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/romimap/Git/ASTex /home/romimap/Git/ASTex/Algo/Quilting /home/romimap/Git/ASTex/Build /home/romimap/Git/ASTex/Build/Algo/Quilting /home/romimap/Git/ASTex/Build/Algo/Quilting/CMakeFiles/test_quilting.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rfournier/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rfournier/Git/ASTex /home/rfournier/Git/ASTex/Algo/Quilting /home/rfournier/Git/ASTex/Build /home/rfournier/Git/ASTex/Build/Algo/Quilting /home/rfournier/Git/ASTex/Build/Algo/Quilting/CMakeFiles/test_quilting.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Algo/Quilting/CMakeFiles/test_quilting.dir/depend
 

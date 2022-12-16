@@ -46,7 +46,7 @@ add_library(ASTex STATIC IMPORTED)
 
 set_target_properties(ASTex PROPERTIES
   INTERFACE_COMPILE_OPTIONS "-Wall;-Wextra;-Wno-unknown-pragmas;-Wno-missing-braces;-fPIC;-std=c++11"
-  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/ITK-4.13;/usr/include/gdcm-3.0;/usr/include;/usr/include/nifti;/usr/include/hdf5/serial;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include/OpenEXR;/home/romimap/Git/ASTex"
+  INTERFACE_INCLUDE_DIRECTORIES "/usr/include/ITK-4.13;/usr/include/gdcm-3.0;/usr/include;/usr/include/nifti;/usr/include/hdf5/serial;/usr/include;/usr/include;/usr/include;/usr/include;/usr/include/OpenEXR;/home/rfournier/Git/ASTex"
   INTERFACE_LINK_LIBRARIES "/usr/lib/x86_64-linux-gnu/libdouble-conversion.so.3.1;itksys;itkvnl_algo;itkvnl;itkv3p_netlib;itknetlib;itkvcl;ITKCommon;itkNetlibSlatec;ITKStatistics;ITKTransform;ITKIOImageBase;ITKIOBMP;gdcmDICT;gdcmMSFF;ITKIOGDCM;/usr/lib/x86_64-linux-gnu/libz.so;ITKIOGIPL;/usr/lib/x86_64-linux-gnu/libjpeg.so;ITKIOJPEG;ITKMetaIO;ITKIOMeta;znz;niftiio;ITKIONIFTI;ITKNrrdIO;ITKIONRRD;/usr/lib/x86_64-linux-gnu/libpng.so;ITKIOPNG;itktiff;ITKIOTIFF;ITKIOVTK;ITKLabelMap;ITKMesh;ITKSpatialObjects;ITKPath;ITKQuadEdgeMesh;ITKOptimizers;ITKPolynomials;ITKBiasCorrection;ITKBioCell;ITKFFT;ofstd;oflog;dcmdata;i2d;dcmimgle;dcmimage;dcmjpeg;ijg8;ijg12;ijg16;dcmjpls;dcmtkcharls;dcmtls;dcmnet;dcmsr;cmr;dcmdsig;dcmwlm;dcmqrdb;dcmpstat;dcmrt;dcmiod;dcmfg;dcmseg;dcmtract;dcmpmap;dcmect;ITKDICOMParser;ITKDeprecated;ITKIOBioRad;ITKIOLSM;ITKIOStimulate;/usr/lib/x86_64-linux-gnu/libexpat.so;ITKIOXML;ITKIOSpatialObjects;ITKFEM;ITKgiftiio;ITKIOMesh;/usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5_cpp.so;/usr/lib/x86_64-linux-gnu/hdf5/serial/libhdf5.so;/usr/lib/x86_64-linux-gnu/libcrypto.so;/usr/lib/x86_64-linux-gnu/libcurl.so;/usr/lib/x86_64-linux-gnu/libpthread.a;/usr/lib/x86_64-linux-gnu/libsz.so;/usr/lib/x86_64-linux-gnu/libdl.a;/usr/lib/x86_64-linux-gnu/libm.so;ITKIOBruker;ITKIOCSV;ITKIOIPL;ITKIOGE;ITKIOSiemens;ITKIOHDF5;minc2;m;dl;rt;/usr/lib/x86_64-linux-gnu/libnetcdf.so;ITKIOMINC;ITKIOMRC;ITKTransformFactory;ITKIOTransformBase;ITKIOTransformHDF5;ITKIOTransformInsightLegacy;ITKIOTransformMatlab;ITKKLMRegionGrowing;ITKVTK;ITKWatersheds;itklbfgs;ITKOptimizersv4;itkopenjpeg;ITKReview;ITKVideoCore;ITKVideoIO;/usr/lib/x86_64-linux-gnu/libpng.so;/usr/lib/x86_64-linux-gnu/libz.so;/usr/lib/x86_64-linux-gnu/libIlmImf-2_5.so;/usr/lib/x86_64-linux-gnu/libIlmImfUtil-2_5.so;/usr/lib/x86_64-linux-gnu/libIlmThread-2_5.so;/usr/lib/x86_64-linux-gnu/libHalf-2_5.so;/usr/lib/x86_64-linux-gnu/libIex-2_5.so;/usr/lib/x86_64-linux-gnu/libImath-2_5.so;-pthread"
 )
 
@@ -54,7 +54,7 @@ set_target_properties(ASTex PROPERTIES
 set_property(TARGET ASTex APPEND PROPERTY IMPORTED_CONFIGURATIONS NOCONFIG)
 set_target_properties(ASTex PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_NOCONFIG "CXX"
-  IMPORTED_LOCATION_NOCONFIG "/home/romimap/Git/ASTex/Build/ASTex/libASTex.a"
+  IMPORTED_LOCATION_NOCONFIG "/home/rfournier/Git/ASTex/Build/ASTex/libASTex.a"
   )
 
 # This file does not depend on other imported targets which have

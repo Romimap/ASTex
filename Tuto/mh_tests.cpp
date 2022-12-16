@@ -33,6 +33,41 @@ double getVariance(ImageRGBd t, int x1, int x2, int y1, int y2, int c = 0) {
     return sum / N;
 }
 
+
+double getTopMean(ImageRGBd t1, ImageRGBd t2, int x1, int x2, int y1, int y2, int c = 0) {
+    double sum = 0.0;
+    double N = 0.0;
+    for (int x = x1; x < x2; x++) {
+        for (int y = y1; y < y2; y++) {
+            if (t1.pixelAbsolute(x, y)[c] > t2.pixelAbsolute(x, y)[c]) {
+                sum += t1.pixelAbsolute(x, y)[c];
+                N++;
+            }
+        }
+    }
+    if (N == 0.0) return 0;
+    return sum / N;
+}
+
+double getTopVariance(ImageRGBd t1, ImageRGBd t2, int x1, int x2, int y1, int y2, int c = 0) {
+    double mean = getTopMean(t1, t2, x1, x2, y1, y2, c);
+    double sum = 0.0;
+    double N = 0.0;
+    for (int x = x1; x < x2; x++) {
+        for (int y = y1; y < y2; y++) {
+            float v = 0.0;
+            if (t1.pixelAbsolute(x, y)[c] > t2.pixelAbsolute(x, y)[c]) {
+                v = t1.pixelAbsolute(x, y)[c] - mean;
+                sum += (v * v);
+                N++;
+            }
+        }
+    }
+    if (N == 0.0) return 0;
+    return sum / N;
+}
+
+
 ImageRGBd filter(ImageRGBd t1, ImageRGBd p1, ImageRGBd t2, ImageRGBd p2, int size, double bias = 0.0) {
     ImageRGBd out(256 / size, 256 / size);
     for (int x = 0; x < 256 / size; x++) {
@@ -42,7 +77,7 @@ ImageRGBd filter(ImageRGBd t1, ImageRGBd p1, ImageRGBd t2, ImageRGBd p2, int siz
             double b = 0;
             for (int i = 0; i < size; i++) {
                 for (int j = 0; j < size; j++) {
-                    if (p1.pixelAbsolute(, y*size+j)[0] + bias > p2.pixelAbsolute(x*size+i, y*size+j)[0] - bias) {
+                    if (p1.pixelAbsolute(x*size+i, y*size+j)[0] + bias > p2.pixelAbsolute(x*size+i, y*size+j)[0] - bias) {
                         r += t1.pixelAbsolute(x*size+i, y*size+j)[0];   
                         g += t1.pixelAbsolute(x*size+i, y*size+j)[1];
                         b += t1.pixelAbsolute(x*size+i, y*size+j)[2];
@@ -62,11 +97,71 @@ ImageRGBd filter(ImageRGBd t1, ImageRGBd p1, ImageRGBd t2, ImageRGBd p2, int siz
     return out;
 }
 
-ImageRGBd mhfiltering(int size, ImageRGBd p1, ImageRGBd c1, ImageRGBd d1, ImageRGBd p2, ImageRGBd c2, ImageRGBd d2) {
+double filterGaussian(ImageRGBd c, double mean, double variance, int ch = 0) {
+    double n = 0.0;
+    double ans = 0.0;
+    for (int x = 0; x < c.width(); x++) {
+        double xi = (double)x / (double)(c.width() - 1);
+        double div = 1.0 / sqrt(variance * 2 * M_PI);
+        double exp = -(pow(xi - mean, 2) / (2 * variance));
+        double gauss = div * pow(M_E, exp);
+        n += gauss;
+        ans += c.pixelAbsolute(x, 0)[ch];
+    }
+    return ans / n;
+}
+
+ImageRGBd mhfiltering(ImageRGBd p1, ImageRGBd c1, ImageRGBd d1, ImageRGBd p2, ImageRGBd c2, ImageRGBd d2, int size, double bias = 0.0) {
+    printf("\n\n");
     ImageRGBd out(256 / size, 256 / size);
     for (int x = 0; x < 256 / size; x++) {
         for (int y = 0; y < 256 / size; y++) {
+
+            int x1 = x * size;
+            int x2 = (x + 1) * size;
+            int y1 = y * size;
+            int y2 = (y + 1) * size;
+
+            std::clock_t c_start_A = std::clock();
+            double meanTopP1 = getTopMean(p1, p2, x1, x2, y1, y2);
+            double varianceTopP1 = getTopVariance(p1, p2, x1, x2, y1, y2);
+            std::clock_t c_end_A = std::clock();
+
+            std::clock_t c_start_B = std::clock();
+            double r1 = filterGaussian(c1, meanTopP1, varianceTopP1, 0) + getMean(d1, x1, x2, y1, y2, 0);
+            double g1 = filterGaussian(c1, meanTopP1, varianceTopP1, 1) + getMean(d1, x1, x2, y1, y2, 1);
+            double b1 = filterGaussian(c1, meanTopP1, varianceTopP1, 2) + getMean(d1, x1, x2, y1, y2, 2);
+            std::clock_t c_end_B = std::clock();
             
+            double meanTopP2 = getTopMean(p2, p1, x1, x2, y1, y2);
+            double varianceTopP2 = getTopVariance(p2, p1, x1, x2, y1, y2);
+            
+            double r2 = filterGaussian(c1, meanTopP2, varianceTopP2, 0) + getMean(d2, x1, x2, y1, y2, 0);
+            double g2 = filterGaussian(c1, meanTopP2, varianceTopP2, 1) + getMean(d2, x1, x2, y1, y2, 1);
+            double b2 = filterGaussian(c1, meanTopP2, varianceTopP2, 2) + getMean(d2, x1, x2, y1, y2, 2);
+
+            double meanP1 = getMean(p1, x1, x2, y1, y2);
+            double meanP2 = getMean(p1, x1, x2, y1, y2);
+            double varianceP1 = getVariance(p1, x1, x2, y1, y2);
+            double varianceP2 = getVariance(p2, x1, x2, y1, y2);
+
+            double v = ((meanP2 - bias) - (meanP1 + bias)) / sqrt(varianceP1 + varianceP2);
+            double w = 0.5 + 0.5 * tanh(0.85 * v); // APPROX
+
+            double r = w * r2 + (1.0 - w) * r1;
+            double g = w * g2 + (1.0 - w) * g1;
+            double b = w * b2 + (1.0 - w) * b1;
+            
+            out.pixelAbsolute(x, y)[0] = w; //TODO rgb
+            out.pixelAbsolute(x, y)[1] = w; //TODO rgb
+            out.pixelAbsolute(x, y)[2] = w; //TODO rgb
+
+
+
+
+            double timeA = 1000.0 * (c_end_A-c_start_A) / CLOCKS_PER_SEC;
+            double timeB = 1000.0 * (c_end_B-c_start_B) / CLOCKS_PER_SEC;
+            printf("\033[F\033[Asize: %d, x: %d, y: %d                      \nMV~%2.2fms    G~%2.2fms   bs:%dx%d                     \n", size, x, y, timeA, timeB, (x2 - x1), (y2 - y1));
         }
     }
     return out;
@@ -190,24 +285,22 @@ int main(int argc, char** argv) {
      
     out = filter(t1, p1, t2, p2, 1);
     save(out, "out1.png");
-
     out = filter(t1, p1, t2, p2, 2);
     save(out, "out2.png");
-
 	out = filter(t1, p1, t2, p2, 4);
     save(out, "out4.png");
-
     out = filter(t1, p1, t2, p2, 8);
     save(out, "out8.png");
-
 	out = filter(t1, p1, t2, p2, 16);
     save(out, "out16.png");
-
 	out = filter(t1, p1, t2, p2, 32);
     save(out, "out32.png");
-
 	out = filter(t1, p1, t2, p2, 64);
     save(out, "out64.png");
+	out = filter(t1, p1, t2, p2, 128);
+    save(out, "out128.png");
+    out = filter(t1, p1, t2, p2, 256);
+    save(out, "out256.png");
 
     ImageRGBd c1(256, 1);
     ImageRGBd d1(t1.width(), t1.height());
@@ -215,8 +308,31 @@ int main(int argc, char** argv) {
     save(c1, "c1.png");
     save(d1, "d1.png", true);
 
+    ImageRGBd c2(256, 1);
+    ImageRGBd d2(t2.width(), t2.height());
+    computeCD(t2, p2, c2, d2);
+    save(c2, "c2.png");
+    save(d2, "d2.png", true);
+
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 1);
+    save(out, "mh_out1.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 2);
+    save(out, "mh_out2.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 4);
+    save(out, "mh_out4.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 8);
+    save(out, "mh_out8.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 16);
+    save(out, "mh_out16.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 32);
+    save(out, "mh_out32.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 64);
+    save(out, "mh_out64.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 128);
+    save(out, "mh_out128.png");
+    out = mhfiltering(p1, c1, d1, p2, c2, d2, 256);
+    save(out, "mh_out256.png");
+
 	return 0;
-
-
 }
 

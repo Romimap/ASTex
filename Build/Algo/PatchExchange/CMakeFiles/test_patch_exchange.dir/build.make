@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/romimap/Git/ASTex
+CMAKE_SOURCE_DIR = /home/rfournier/Git/ASTex
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/romimap/Git/ASTex/Build
+CMAKE_BINARY_DIR = /home/rfournier/Git/ASTex/Build
 
 # Include any dependencies generated for this target.
 include Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/depend.make
@@ -72,58 +72,58 @@ include Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/flags.make
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/flags.make
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o: ../Algo/PatchExchange/test_patch_exchange.cpp
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o -MF CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o -c /home/romimap/Git/ASTex/Algo/PatchExchange/test_patch_exchange.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o"
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o -MF CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.o -c /home/rfournier/Git/ASTex/Algo/PatchExchange/test_patch_exchange.cpp
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.i"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/PatchExchange/test_patch_exchange.cpp > CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.i
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/PatchExchange/test_patch_exchange.cpp > CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.i
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.s"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/PatchExchange/test_patch_exchange.cpp -o CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.s
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/PatchExchange/test_patch_exchange.cpp -o CMakeFiles/test_patch_exchange.dir/test_patch_exchange.cpp.s
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/flags.make
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o: ../Algo/PatchExchange/FragmentProcessor.cpp
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o -MF CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o -c /home/romimap/Git/ASTex/Algo/PatchExchange/FragmentProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o"
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o -MF CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.o -c /home/rfournier/Git/ASTex/Algo/PatchExchange/FragmentProcessor.cpp
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.i"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/PatchExchange/FragmentProcessor.cpp > CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.i
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/PatchExchange/FragmentProcessor.cpp > CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.i
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.s"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/PatchExchange/FragmentProcessor.cpp -o CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.s
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/PatchExchange/FragmentProcessor.cpp -o CMakeFiles/test_patch_exchange.dir/FragmentProcessor.cpp.s
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/flags.make
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o: ../Algo/PatchExchange/PatchProcessor.cpp
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o -MF CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o -c /home/romimap/Git/ASTex/Algo/PatchExchange/PatchProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o"
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o -MF CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.o -c /home/rfournier/Git/ASTex/Algo/PatchExchange/PatchProcessor.cpp
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.i"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/PatchExchange/PatchProcessor.cpp > CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.i
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/PatchExchange/PatchProcessor.cpp > CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.i
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.s"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/PatchExchange/PatchProcessor.cpp -o CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.s
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/PatchExchange/PatchProcessor.cpp -o CMakeFiles/test_patch_exchange.dir/PatchProcessor.cpp.s
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/flags.make
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o: ../Algo/PatchExchange/PoissonDiskSampler.cpp
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o -MF CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o -c /home/romimap/Git/ASTex/Algo/PatchExchange/PoissonDiskSampler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o"
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o -MF CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o.d -o CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.o -c /home/rfournier/Git/ASTex/Algo/PatchExchange/PoissonDiskSampler.cpp
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.i"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/romimap/Git/ASTex/Algo/PatchExchange/PoissonDiskSampler.cpp > CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.i
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/rfournier/Git/ASTex/Algo/PatchExchange/PoissonDiskSampler.cpp > CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.i
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.s"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/romimap/Git/ASTex/Algo/PatchExchange/PoissonDiskSampler.cpp -o CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.s
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/rfournier/Git/ASTex/Algo/PatchExchange/PoissonDiskSampler.cpp -o CMakeFiles/test_patch_exchange.dir/PoissonDiskSampler.cpp.s
 
 # Object files for target test_patch_exchange
 test_patch_exchange_OBJECTS = \
@@ -269,18 +269,18 @@ bin/test_patch_exchange: /usr/lib/x86_64-linux-gnu/libHalf-2_5.so
 bin/test_patch_exchange: /usr/lib/x86_64-linux-gnu/libIex-2_5.so
 bin/test_patch_exchange: /usr/lib/x86_64-linux-gnu/libImath-2_5.so
 bin/test_patch_exchange: Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/romimap/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/test_patch_exchange"
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_patch_exchange.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rfournier/Git/ASTex/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/test_patch_exchange"
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_patch_exchange.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/build: bin/test_patch_exchange
 .PHONY : Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/build
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/clean:
-	cd /home/romimap/Git/ASTex/Build/Algo/PatchExchange && $(CMAKE_COMMAND) -P CMakeFiles/test_patch_exchange.dir/cmake_clean.cmake
+	cd /home/rfournier/Git/ASTex/Build/Algo/PatchExchange && $(CMAKE_COMMAND) -P CMakeFiles/test_patch_exchange.dir/cmake_clean.cmake
 .PHONY : Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/clean
 
 Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/depend:
-	cd /home/romimap/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/romimap/Git/ASTex /home/romimap/Git/ASTex/Algo/PatchExchange /home/romimap/Git/ASTex/Build /home/romimap/Git/ASTex/Build/Algo/PatchExchange /home/romimap/Git/ASTex/Build/Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rfournier/Git/ASTex/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rfournier/Git/ASTex /home/rfournier/Git/ASTex/Algo/PatchExchange /home/rfournier/Git/ASTex/Build /home/rfournier/Git/ASTex/Build/Algo/PatchExchange /home/rfournier/Git/ASTex/Build/Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Algo/PatchExchange/CMakeFiles/test_patch_exchange.dir/depend
 

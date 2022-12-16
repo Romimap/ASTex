@@ -1,4 +1,4 @@
-# Install script for directory: /home/romimap/Git/ASTex/Algo/TextonNoiseAnalysis
+# Install script for directory: /home/rfournier/Git/ASTex/Algo/TextonNoiseAnalysis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

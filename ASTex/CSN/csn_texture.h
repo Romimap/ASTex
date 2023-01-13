@@ -409,7 +409,7 @@ typename CSN_Texture<I>::ImageType CSN_Texture<I>::synthesize(unsigned width, un
 	pcaOutput.initItk(output.width(), output.height());
 	if(m_func_proceduralBlendingSubstitute == nullptr)
 	{
-		pcaOutput.for_all_pixels([&] (PcaPixelType &pix, int x, int y)
+		pcaOutput.parallel_for_all_pixels([&] (PcaPixelType &pix, int x, int y)
 		{
 			Eigen::Vector2d uv;
 			uv[0] = double(x)/m_exemplar.width();
